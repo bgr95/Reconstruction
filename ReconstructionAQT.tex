@@ -1,0 +1,330 @@
+\documentclass[11pt]{article}
+\usepackage{rona}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%Basic  Stuff%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\author{\textsc{Bharath Ron}}
+\title{{{\LARGE \bfseries \textsc{A Reconstruction of}}\\\vspace{0em}\huge\bfseries\textsc{{Algebraic Quantum Theory}}}\\\vspace{0em}}}
+\date{}
+\maketitle
+\vspace{2em}
+\begin{adjustwidth}{3em}{3em}
+\begin{abstract}
+\vspace{.25em}
+\noindent We obtain a reconstruction of algebraic quantum theory, emphasising foundational aspects. We obtain the $W^*$-algebra structure from elementary assumptions about observers and how they observe reality. This highlights the need for the $W^*$-algebra structure by directly obtaining its mathematical axioms from simple thought experiments.\\\par
+
+\noindent {\bfseries\textsc{Keywords:}} algebraic quantum theory, $W^*$-Algebras, why the quantum?
+\end{abstract}
+\end{adjustwidth}
+
+\vspace{2.5em}
+\noindent Every scientific theory comprises of a \emph{linguistic representation} of a collection of postulates speculating the relations between facts of the world. The linguistic structures enable predictions about facts of the world by leveraging the postulated relations between the facts. The predictive capabilities of a scientific theory can be made more reliable by refining its faulty postulates. In this case we can only modify or remove the faulty postulates. Such refinements lead to theories with fewer postulates which are easier to validate and they provide more reliable predictions. Some of these faulty postulates might be embedded within the linguistic structures of the language used for postulate representation. To circumvent such linguistic issues, we may retain only those structures common to all languages. Such universally common linguistic structures are \emph{the rules of logic} and such a language is mathematics. Therefore we may view \emph{mathematics as the universal language for postulate representation}. By using mathematics for postulate representation physics effectively avoids issues arising from suboptimal linguistic structures. The reliability of predictions of physical theories depends solely on its postulates. Formulation of physical theories usually involves finding an appropriate mathematical theory where its postulates \emph{can} be represented. If some of the structures of the mathematical theory are unnecessary for postulate representation, then such structures can constrain predictions that end up conflicting with observed facts. For example, commutativity in classical theories leads to conflicts with observed facts. Hence, it is crucial to figure out which assumptions of the mathematical theory are \emph{necessary} for representation of postulates. This necessity condition establishes an equivalence between the set of assumptions of the mathematical theory and the set of postulates of the corresponding physical theory. Such a mathematical theory will be called \emph{the universal theory} for the postulates.
+
+Our objective is to develop the universal mathematical theory for the postulates we only consider the structures essential for postulate representation. The study of such peculiar structures may contribute to the development of new mathematics, which might be useful in the future. It is however not our focus here. 
+We show the necessity of $W^*$-algebra structure for the representation of postulates about how observers observe reality. The present approach can be thought of as a modern reformulation of Heisenberg's original idea.
+
+\subsection*{Preparation \& Measuring Instruments}
+The physical systems of interest to us are those for which the observed phenomena can be described by the notion of an \emph{observable}. The physical idea here is that the world can be described by sentences of the form \emph{the observable $\Sigma$ has the value $o$}. It is at this stage we are forced to assume  the existence of rules of logic since they are needed to make \emph{sense} of the sentence above. The next step is to articulate this idea in mathematical language. This means that we need to construct an appropriately predictive mathematical theory where sentences like the one above can be universally represented. The construction of such a universal representation for the postulate we use here is closest to the instrumentalist approach, see \cite{Kraus},\cite{Ludwig1},\cite{Ludwig2}, with some ideas borrowed from the quantum logic approach, see \cite{Jauch},\cite{Kalmbach},\cite{Peres},\cite{Varadarajan},\cite{vonNeumann}, and algebraic quantum theory. The starting point is the notion of measuring instruments and preparation instruments and since the only way to verify facts about the world is by performing measurements in the world, the approach is very general. Any changes occurring in the instruments during \emph{measurements} will be accepted as objective outcomes. From this point of view, the fundamental notions will have to be defined operationally in terms of measuring instruments, preparation procedures, and the prescriptions for their application. The theory is then interpreted entirely in terms of such instruments and outcomes which are the changes occurring to instruments. 
+\subsubsubsection{Digression: Subjectivity \& Objectivity}
+\noindent The preparation of a system may be viewed as a representation of an experimenter's beliefs about the world, the collection of measuring instruments allow the experimenter to verify their beliefs using the rules of logic. The results of experiments represent an updating of the experimenter's beliefs. If we define an observer as an equivalence class of experimenters with the same set of beliefs, then we may view such instrumentalist theories \emph{as the theory of observers and what they can observe.} The set of preparation procedures of the system corresponds to the set of all beliefs the observer \emph{can} hold, and represents the observer's \emph{subjective reality}. Since the set of measuring instruments is the only link between an experimenter and \emph{objective reality}, we may identify the the set of all measuring instruments with objective reality itself. From this point of view, we may view instrumentalist theories as the theory of duality between the subjective and the objective. 
+
+\subsubsection*{Operational Structure}\label{sec:gpt}
+Every preparation procedure is characterised by the kind of system it prepares. The measuring instruments are capable of undergoing upon performing a measurement evaluating the truth value of collection of possible outcomes. The possible results of such an experiment are called outcomes of the experiment and the observable change in the instrument is called an effect. Two completely different preparation procedures may give the same operational statistics, that is, they may give the same probabilities for every experiments. Such preparation procedures must be considered equivalent operationally. An equivalence class of preparation procedures yielding the same operational statistics for experiments is called an ensemble. Similarly, there may be two measuring instruments that have the same chances of undergoing a change for similarly prepared systems. Such measuring instruments must be operationally considered to be equivalent. An equivalence class of change for measuring instruments is called an effect. An effect is the equivalence class of all instruments that undergo a change for the same possible outcome. By considering equivalence classes we have obtained the structure of sets. Since we are considering equivalence classes, the construction and behaviour of the instruments are irrelevant to the discussion. We denote the set of ensembles by $\mathfrak{S}$ and the set of effects by $\mathfrak{E}$. We may simplify the procedure consider instruments that record \emph{hits}. These instruments perform simple \emph{yes-no} measurements. Any measurement can be interpreted as a combination of \emph{yes-no} measurements. These \emph{yes-no} instruments can be used to build any general instrument. Suppose we have such a measuring instrument, label its measuring instrument by $o$. If the experiment is conducted a lot of times, we get a relative frequency of occurrence of \emph{yes}. Here \emph{yes} is an observable change in the instrument. It is hence an observable effect. To every preparation procedure $\rho$ and measuring instrument $o$ there exists a probability $\mu(\rho| o)$ of the occurrence of \emph{yes} associated with the pair. Therefore we obtain a pairing of ensembles and effects,
+\begin{align*}
+\mu(\cdot|\cdot):\mathfrak{S}\times \mathfrak{E}\longrightarrow[0,1]
+\end{align*}
+The sets $\mathfrak{E}$ and $\mathfrak{S}$ together with the pairing $\mu(\cdot|\cdot)$ will be called an operational theory. The pairing $\mu(\cdot|\cdot)$ of ensembles and effects of the system will be called the operational statistics for the system. The number $\mu(\rho|o)$ is called the operational statistics for the pair $(\rho,o)$. Since any two preparations giving the same result on every effect represent the same ensemble and two measurement procedures that cannot be distinguished by ensembles represent the same effect the ensembles and effects must mutually separate each other respect to their pairing.
+
+\subsection*{Locally Convex Structure}\label{LocallyConvex}
+In order to be able to work with effects and ensembles we now embed them inside sets with mathematical structure that respects the expected operational relations. We now describe how the collection of effects and the collection of ensembles inherit mathematical structures. In our case the operational requirement is that we should be able to make sense of taking mixtures of effects and ensembles. Suppose we can prepare systems in different ensembles by varying settings of a preparation procedures, then by adjusting the settings we should be able to prepare systems in mixtures of ensembles. We expect the space of ensembles to have the structures to describe mixtures. 
+
+We assume that we can form such mixtures by changing the settings on the preparation procedures. If such adjustments are parametrised by real numbers, such as rotating a knob, then the notion of convexity needed for formalising comes from the space of real numbers. The space of real numbers is a convenient space because its convexity structure is related to a lot of other structures, such as its topology, its vector space structure, and so on. As discussed in \cite{Gudder}, such a notion of mixing corresponds mathematically to the notion of convex combination. Hence real vector space structure acts as a good starting point. Hence we may expect the set $\mathfrak{S}$ to have the structures for making sense of convexity and we expect that each functional $\mu(\cdot|o)$ preserves the convex structure since we expect the operational statistics to preserve this convexity. To make sense of taking convex linear combinations we need to be able to make sense of linear combinations. Hence we must embed the set of effects and the set of ensembles in a vector space with respect to a field that is at least as large as the real numbers. It is important to note that preparation procedures and measuring instruments producing the same ensembles and effects are not equal, in fact, the notion of equality will not even make sense. The transition from preparation procedures and measuring instruments to ensembles and effects is a transition from the real physical world to the abstract mathematical world. It should also be noted that it does not make sense to \emph{prepare} closed systems, one has to assume such systems start off in some state a priori.
+
+A generalised probabilistic theory is an embedding of $\mathfrak{S}$ and $\mathfrak{E}$ inside vector spaces, such that the ensembles and effects are uniquely determined by the operational statistics they produce. This uniqueness of operational statistics is called the principle of tomography in quantum foundations and quantum information literature, and in our case this holds trivially by construction. To construct a generalised probabilistic theory for $\mathfrak{S}$ and $\mathfrak{E}$ we start by viewing effects and ensembles as linear functionals on a suitable space. Denote by $\mathcal{A}_*$ the set of maps $\omega$ of the form
+$$\omega(o)=\textstyle\sum_{i\in F} \lambda_i \mu\big(\rho_i |o\big),$$
+for every $o$ in $\mathfrak{E}$, where $\{\rho_i\}_{i\in F}$ is a finite collection of ensembles and $\lambda_i$ are scalars. Since the notion of convexity is inherited from the notion of convexity on the real line, we assume that the field $\mathbb{K}$ contains the field of real numbers. Any linear combination of such maps also belongs to $\Acal_* $, it follows that $\Acal_* $ is a $\KK$-vector space. Denote by $\mathcal{E}$ the set of maps $E$ of the form
+$$E(\rho)=\textstyle\sum_{i\in F}\lambda_i \mu\big(\rho | o_i\big),$$
+for every $\rho$ in $\mathfrak{S}$, where $\{o_i\}_{i\in F}$ is a finite collection of effects and $\lambda_i$ are scalars. It follows that $\mathcal{E}$ is also a $\KK$-vector space. We embed ensembles inside $\mathcal{A}_*$ with the map
+\begin{align*}
+	\rho \mapsto \mu(\rho|\cdot),
+\end{align*}
+where $\mu(\rho|\cdot)$ is the map $o \mapsto \mu(\rho|o)$. Similarly, we embed effects inside $\mathcal{E}$ with the map
+\begin{align*}
+	o \mapsto \mu(\cdot|o).
+\end{align*}
+where $\mu(\cdot|o)$ is the map $\rho\mapsto \mu(\rho|o)$. The elements of the convex subsets $\mathfrak{E}$ of $\Ecal$ and $\mathfrak{S}$ of $\Acal_* $ are called effects and states respectively.
+
+The vector space structure of $\Acal_* $ and $\Ecal$ allows us to develop algebraic tools for studying effects and ensembles. So we embedded an operational theory by viewing the effects and ensembles as linear functionals on each other and took \emph{quotients} with operational equivalences. Since we expect the ensembles and effects to be determined by the probabilities they produce we must also expect the vector spaces $\Ecal$ and $\Acal_* $ to inherit a relation between each other from the pairing $\mu(\cdot|\cdot)$ of $\mathfrak{E}$ and $\mathfrak{S}$. So we must have a pairing 
+$$\big\langle\cdot|\cdot\big\rangle_\Ecal : \mathcal{A}_*\times \mathcal{E}\to \mathbb{K},$$
+such that for every preparation procedure $\rho$ and measurement outcome $o$ we have,
+$$\big\langle \mu(\rho|\cdot)|\mu(\cdot|o)\big\rangle_\Ecal=\mu(\rho|o).$$
+Hence we obtain a pairing of locally convex spaces equipped with the weak topologies. We now have access to the theory of conjugate duality of locally convex spaces.
+
+%The deeper reason for the introduction of the complex number field is that it is algebraically closed and allows for factorisation. We will later see that the complex structure allows us mathematically to make sense of the physical idea that an instrument which undergoes a change for a collection of events can be replaced by a collection of instruments for those simultaneously measurable outcomes. Such a decomposition of a given effect into a collection of smaller, simultaneously measurable effects is made precise using complex structures by the spectral theory.
+
+\subsection*{Banach Space Structure}
+The operational requirements force the space of effects and ensembles to be vector spaces. The vector space structure is however insufficient for doing analysis with effects and ensembles which would allow the theory to be predictive. We now discuss how to introduce additional mathematical structures on the space of effects and ensembles, based on operational heuristics. We will later discuss the mathematically precise formulations of the heuristics.
+
+Suppose we have two measuring instruments for an outcome where one is more accurate than the other. In such a case, the less accurate measuring instrument will readily undergo a change compared to the more accurate instrument. If the instrument is too accurate, it becomes difficult to observe any changes occurring in the measuring instrument. In this sense, the more accurate instrument should be \emph{closer} to the instrument which never undergoes any changes. So, we must expect $\Ecal$ to have some structure that quantifies how readily an instrument undergoes a change. The instrument which always undergoes a change should be the easiest to notice changes and the instrument which never undergoes any changes should be the hardest. Suppose we have two measuring instruments which undergo changes for outcomes $o$ and $o'$, and let $\mu(\cdot|o)$ and $\mu(\cdot|o')$ be the corresponding effects. For combined instruments, we expect the accuracy change for the combined instruments to depend on the accuracy of the component instruments. Hence the changes in accuracy must be expected to vary proportionally to the changes in accuracy of its components. This gives rise to continuity requirements on the space of effects. We assume the existence of the unit $1$, which corresponds to the instrument that is always true for any preparation procedure. The unit must be unique since any other such element must be operationally equivalent. {Operationally, the unit corresponds to the \emph{existence} of the system itself, since it must always be true.} Similarly we assume the existence of the unique $0$ element which outputs \emph{no} for every preparation procedure, and can be thought of as a faulty instrument which never undergoes any changes. Note that the less accurate instrument undergoes a change for more events than intended. A faulty instrument never undergoes any change, for any event. It has no possibility to be inaccurate, and hence correspond to the most accurate instruments.
+
+For any collection of instruments for a given outcome we can obtain a relation between such instruments by their accuracy. Consider two instruments which can undergo changes under some \emph{similar} situations. This means that we may have some redundancies, or common inaccuracies, that is, they can measure some common possible outcomes, or alternatively, they have differing accuracy for measuring the common outcome. If the accuracy of either of the instruments is changed, the accuracy of the combined instrument should also change, and this change should be proportional to the change in accuracy of the instrument.
+
+The notion of accuracy of instruments must give rise to a function on the space of effects. In our case, it is easier to model the inaccuracy. If changes in accuracy are modelled using the addition operation on the real line, then the notion of inaccuracy must correspond to a real-valued function $f$ such that,
+$$f\big(\mu(\cdot|o)+ \mu(\cdot|o')\big)\leqq f\big(\mu(\cdot|o)\big) +f\big(\mu(\cdot|o')\big).$$
+Such functions are called sub-linear maps. The notion of inaccuracy of instruments naturally gives rise to triangle inequality like properties.
+
+We can describe this \emph{inaccuracy function} more conveniently as a supremum. Since inaccuracy represents the maximal likelihood of undergoing a change, it must correspond to the supremum of undergoing a change over all preparation procedures. That is to say, the accuracy in the real world can only depend on \emph{reality} which we expect to be closely related to preparation procedures. This gives us a definition in terms of supremum over preparation procedures, and can be defined on all of $\Ecal$,
+$$\big\| E\big\|_{\Ecal}\coloneqq \sup_{\omega\in\mathfrak{S}}\Big[\big| \big\langle \omega|E\big\rangle_\Ecal\big|\Big],$$
+for every $E$ in $\Ecal$, and the supremum is taken over all preparation procedures and which corresponds to the convex embedded subset $\mathfrak{S}$ of $\Acal_* $.  Here $|\cdot|:\KK\to \RR^+$ is the standard modulus function on $\KK$. It immediately follows that the map $E\mapsto \|E\|_\Ecal$ satisfies the triangle inequality, and scaling condition,
+\begin{center}
+	$\|E +F\|_\Ecal \leqq \|E\|_\Ecal+\|F\|_\Ecal.$\\\vspace{.35em}
+	$\big\|\lambda \big\|_\Ecal=|\lambda| \big\|E\big\|_\Ecal$,
+\end{center}
+for every $E$ and $F$ in $\Ecal$ and $\lambda$ any scalar. By definition of the norm we have $\|1\|_\Ecal=1$. By the assumption that there must always exist (by Zorn's lemma) some preparation procedure with non-trivial operational statistics, we deduce that $\|\cdot\|_\Ecal$ is non-trivial, that is, $\|E\|_\Ecal=0$ if and only if $E\equiv 0$. Hence
+\(\|\cdot\|_\Ecal\) defines a norm on $\Ecal$.
+
+Similarly, $\Acal_* $ also inherits operator norm from $\Ecal$. We can have two preparation procedures, where the preparations settings are slightly varied. We can say two ensembles are close to each other if the operational statistics are close to each other for all effects. Hence how similar two preparation procedures are can also be described as a supremum, and this can be described on all of $\Acal_* $. 
+$$\big\| \omega \big\|_{\Acal_* }\coloneqq \sup_{E\in \mathfrak{E}}\Big[\big| \big\langle \omega|E\big\rangle_\Ecal\big|\Big],$$
+for every $\omega$ in $\Acal_*$ and the supremum is taken over all possible measurements which corresponds to the convex embedded subset $\mathfrak{E}$ of $\Ecal$. We can hence require both $\Ecal$ and $\Acal_* $ to be normed vector spaces.
+
+The notion of limits is a purely mathematical notion, and must be common to every experimenter since we expect mathematics to be universal. This ensures that the predictions obtained by one experimenter assuming the existence of limits remains valid for any other experimenter. This allows the experimenter to mathematically analyse and predict facts about the world based on the experimentally verified beliefs. Hence we may assume that the normed spaces $\Ecal$ and $\Acal_*$ are complete with respect to their respective norms, and $\mathfrak{E}$ and $\mathfrak{S}$ are closed convex subsets of $\Ecal$ and $\Acal_*$ respectively. The spaces $\Ecal$ and $\Acal_* $ are generated by limits of linear combinations of elements of $\mathfrak{E}$ and $\mathfrak{S}$ respectively. By the boundedness of operational statistics we note that effect and ensembles give rise to norm bounded linear functionals on $\Acal_* $ and $\Ecal$ respectively. By assumption $\mu(\cdot|\cdot)$ separates $\mathfrak{S}$ and $\mathfrak{E}$. Since $\langle \cdot|\cdot\rangle_\Ecal$ coincides with $\mu(\cdot|\cdot)$ for ensembles and effects, it follows by the density of the span of $\mathfrak{E}$ that
+$$\big\langle \cdot|\cdot\big\rangle_\Ecal: \Acal_*\times \Ecal \to \mathbb{K},$$
+is a non-degenerate pairing, and hence $\langle \Ecal|\Acal_* \rangle_\Ecal$ must be a dual pair. If $(\Acal_* )^*$ is the space of norm bounded linear functionals on $\Acal_* $, then as Banach spaces we must have
+$$\Ecal\cong(\Acal_*)^*.$$
+This gives us access to the tools of duality theory of Banach spaces.
+\subsection*{Banach Algebra Structure}
+We expect varying accuracy of either of the measuring instruments corresponding to $E$ or $F$ to vary the accuracy of $EF$ accordingly. Hence we expect the algebraic structure on $\Ecal$ to respect the topological structure on $\Ecal$ coming from the norm $\|\cdot\|_\Ecal$. We may perform a measurement before or after performing some other measurement. This composite measurements can itself be thought of as a measuring instrument. Heuristically, when these concatenated measurements have inaccuracies which are independent of each other, we must expect the accuracy of the concatenation, to amplify the inaccuracies so the total inaccuracy would be that of the first instrument \emph{and} the second instrument and hence must correspond to the product of inaccuracies. This can only be the case when the accuracies of the two instruments are independent. Hence the accuracy of the concatenation must be expected to be less than the product of individual accuracies. This gives rise to an algebra structure on the space of effects (note that there is no postulate so far \emph{requiring} commutativity of the product structure). The space $\Ecal$ comes equipped with a natural left and right actions of effects on it given by
+$$\Lcal_E F=EF\:\:;\:\:\Rcal_F E=EF.$$
+We now study the topological properties of the product.
+ 
+The composite element $\Lcal_EF=EF$ corresponds to a well-defined measuring instrument, and the accuracy of the combined instrument is given by $\|EF\|_\Ecal=\sup_{\omega\in \mathfrak{S}}|\langle \omega|EF\rangle_\Ecal|$. Since we are allowed to apply $E$ after applying any other measuring instrument the accuracy of left-composition by $E$ is given by,
+\begin{align*}
+	\big\|\Lcal_E\big\|_{\Bcal(\Ecal)}&=\sup_{F\in\mathfrak{E}\atop\omega\in\mathfrak{S}} \Big[\big|\big\langle \omega|EF\big\rangle_\Ecal\big|\Big]\\&=\sup_{F\in \mathfrak{E}}\bigg[\sup_{\omega\in \mathfrak{S}}\Big[\big|\big\langle \omega| EF \big\rangle_\Ecal\big|\Big]\bigg]=\sup_{F\in \mathfrak{E}}\Big[\big\|EF\big\|_\Ecal\Big].
+\end{align*}
+Similarly, the norm of $\Rcal_F$ is given by,
+$$\big\|\Rcal_F\big\|_{\Bcal(\Ecal)}=\sup_{E\in \mathfrak{E}}\Big[\big\| EF\big\|_\Ecal\Big].$$
+So, both $\Lcal_E$ and $\Rcal_F$ belong to the space $\Bcal(\Ecal)$ of bounded operators on $\Ecal$.
+
+Since we expect the accuracy of the composite to change proportionally to the change in accuracy of the composing instrument, we expect both $\Lcal_E$ and $\Rcal_F$ to be continuous. This must relate the norm $\|\cdot\|_{\Bcal(\Ecal)}$ and the norm $\|\cdot\|_\Ecal$. To relate the two norms we start with the following relation; $\Rcal_FE=EF=\Lcal_E F.$ By continuity of $\Rcal_F$ we have, $\| \Rcal_F E\|_\Ecal =\| \Lcal_E F\|_\Ecal\leqq \| \Lcal_E \|_{\Bcal(\Ecal)}\:\| F\|_\Ecal.$ Hence $\{\Rcal_F E\}_{F\in \mathfrak{E}}$ is a bounded set for every $E$. 
+
+Assuming $\Ecal$ is a Banach space, by the Banach-Steinhaus theorem or the uniform boundedness principle, point-wise boundedness of the set $\{\Rcal_F E\}_{F\in \mathfrak{E}}$ implies that $\{\Rcal_F\}_{F\in {\mathfrak{E}}}$ is uniformly bounded, with the uniform bound $\vertiii\Rcal$. Hence for every $E\in \Ecal$,
+$$\big\|\Rcal_F\big\|_{\Bcal(\Ecal)} \leqq \vertiii\Rcal \:\big\|F\big\|_\Ecal,$$
+The map $F\mapsto \Rcal_F$ is the following bounded linear map,
+\begin{align*}
+	\Rcal:\:&\Ecal\to \Bcal(\Ecal)\\
+	&F\to \Rcal_F.
+\end{align*}
+The mapping $\Rcal$ continuously maps the Banach space ${\Ecal}$ into the Banach algebra $\Bcal({\Ecal})$ of bounded linear maps on $\Ecal$. The mapping $\Rcal$ is a continuous algebra homomorphism. Assuming $\|1\|_\Ecal=1$, we have,
+$$\big\|E\big\|_\Ecal=\big\|\Rcal_E(1)\big\|_\Ecal \leqq \big\|\Rcal_E\big\|_{\Bcal(\Ecal)}\leqq \vertiii\Rcal \:\big\|E\big\|_\Ecal.$$
+We also have $\|\Rcal_1 (1)\|=\|1\|=1$, hence it follows that $\vertiii \Rcal =1$.
+
+Hence $\Rcal(\Ecal)$ is a norm-closed sub-algebra of $\Bcal({\Ecal})$. The map $\Rcal$ is an algebraic isomorphism from ${\Ecal}$ to $\Rcal({\Ecal})$. Since for any two bounded linear operators $S$ and $T$ on ${\Ecal}$ we have, $\|TS\| \leqq \|T\|\:\|S\|$, $\Rcal({\Ecal})$ inherits this property and we have,
+$$\big\|EF\big\|_\Ecal\leqq \big\|E\big\|_\Ecal\big\|F\big\|_\Ecal$$
+Since $\|\Rcal_1\|_{\Bcal(\Ecal)}=1$ we have, $\|\Rcal_E(1)\|_\Ecal =\|E\|_\Ecal \leqq \|\Rcal_E\|_{\Bcal(\Ecal)} \leqq \|\Rcal_1\|_{\Bcal(\Ecal)}\:\|E\|_\Ecal=\|E\|_\Ecal.$ Similarly for $\Lcal$.  Then we must have
+$$\big\|\Rcal_E\big\|_{\Bcal(\Ecal)}=\big\|E\big\|_\Ecal=\big\|\Lcal_E\big\|_{\Bcal(\Ecal)}.$$
+Hence the following isometric isomorphism of $\Ecal$ with its image;
+\begin{align*}
+	\Rcal:\Ecal&\rightarrowtail \Rcal(\Ecal)\\
+E&\mapsto \Rcal_E.
+\end{align*}
+The algebra $\Rcal({\Ecal})$ inherits the topological, and algebraic structure structures from $\Bcal(\Ecal)$ and is itself a Banach algebra. For each $\Rcal_E$, the map $\Rcal_E:\omega\mapsto \big\langle \omega|E\big\rangle_\Ecal,$ is a continuous functional such that
+$$\big|\omega(\Rcal_E)\big|=\big|\big\langle \omega|E\big\rangle_\Ecal\big|\leqq \|\Rcal_E\|_{\Bcal(\Ecal)}\big\|\omega\big\|_{\Acal_*}.$$
+Therefore the elements of $\Acal_* $ respect the topological properties of $\Rcal(\Ecal)$.
+%This gives us access to the tools of the algebraic duality between ideals and subspaces.
+
+We may now note what it means to re-perform an experiment or attempt to measure the same outcome. For an outcome $o$, the preparation procedure concatenated by a measuring instrument corresponding to the effect $\mu(\cdot|o)$ is itself a preparation procedure. To such preparation procedure, an application of the same measuring instrument again should not change the ensemble the procedure produces, since the the belief about outcome has already been verified. Since the concatenation of measurements corresponds to the product structure of $\Rcal(\Ecal)$, it must be the case that whenever $\Rcal_{E}$ in $\Rcal(\Ecal)$ corresponds to an experimental outcome it must correspond to an idempotent element. Hence for any outcome $o$ of an experiment, we must have
+$$\Rcal_{\mu(\cdot|o)}^2=\Rcal_{\mu(\cdot|o)}.$$
+The effects of measuring outcomes correspond to orthogonal projections in $\Rcal(\Ecal)$. We cannot make sense of dividing up of instruments into components at the level of the pairing $\mu(\cdot|\cdot)$ of $\mathfrak{E}$ and $\mathfrak{C}$. This requires us making sense of concatenation which we can make sense 
+in $\Rcal(\Ecal)$. We obtain a new dual pair;
+\begin{align*}
+	\big\langle \cdot|\cdot\big\rangle_{\Rcal(\Ecal)} :\Acal_* \times \Rcal(\Ecal)\to \KK.
+\end{align*}
+where $$\big\langle \omega|\Rcal_E\big\rangle_{\Rcal(\Ecal)}=\omega(\Rcal_E)$$
+The embedding $\Rcal:\Ecal\to \Rcal(\Ecal)$ was not used in the description of concatenation of effects, but to describe the topological properties of concatenations.
+
+We now consider operations on the space of effects that are physically meaningful. Suppose we perform a rearrangement or readjustments of all the measuring instruments. Then we can consider all the measuring instruments which have been turned to non-functioning instruments, these instruments never undergo any changes, and the re-arrangement or re-adjustment of instruments acts as a switch-off for those instruments. Assuming such manipulations keep the system within itself, it must keep the space of effects invariant. However the only way to find out what changes we have made to the system is by performing experiments on the system. Since the space of states is separating for the space of effects, any manipulation we do to the space of effects are \emph{seen} by the space of states. Hence we consider the equivalence class of such manipulations on the space of effects, which affect the pairing $\langle \cdot| \cdot\rangle_{\Rcal(\Ecal)}$ of $\Rcal(\Ecal)$ with $\Acal_* $ in the same way. Each such equivalence class of manipulation of the system corresponds to a linear map,
+$$T:\Rcal(\Ecal)\to \Rcal(\Ecal).$$
+The manipulation $T$ of the system can also be thought of as a manipulation of the preparation procedures. We can also consider the equivalence class of manipulations of the system giving rise to the same change in preparation procedures, and for every ensemble $\omega$ this can be described in terms of operational statistics the map,
+$$R_T\omega: \Rcal_E\mapsto\big\langle \omega|T\Rcal_E\big\rangle_{\Rcal(\Ecal)}.$$
+Any physically meaningful manipulation of the system must be compatible with mixing of preparation procedures. Hence we obtain a bounded real linear map,
+\begin{align*}
+R_T:\Acal_*&\longrightarrow \Acal_*\\
+\omega&\mapsto\Big[\Rcal_E\mapsto\big\langle \omega|T\Rcal_E\big\rangle_{\Rcal(\Ecal)}\Big].
+\end{align*}
+As soon as $\Rcal(\Ecal)$ possesses an algebra structure, we can make sense of polynomials in $\Rcal(\Ecal)$. 
+
+\subsection*{Complex Structure \& $\dagger$-Operation}
+Suppose a measuring instrument consists of a collection of mutually compatible instruments, that is, the measurements performed by such instruments do not affect the outcomes of the other instruments. Suppose the instrument undergoes a change if it undergoes a change for each of its component instruments or sub-instruments, then the probability of outcome for such an instrument should correspond to product of probabilities of its components. 
+
+Let $\mu(\cdot|o)$ be the effect corresponding to such an instrument and $\mu(\cdot|o_i)$ be the effects corresponding to its components. Then for any ensemble $\omega$ we must have,
+$$\big\langle \omega|\Rcal_{\mu(\cdot|o)}\big\rangle_{\Rcal(\Ecal)}=\prod_{i\in \Ical}\:\big\langle \omega|\Rcal_{\mu(\cdot|o_i)}\big\rangle_{\Rcal(\Ecal)}.$$
+Since each effect corresponds to an equivalence class of measuring instruments, we may expect there to exist some measuring instrument (by Zorn's lemma) which is the collection of compatible measuring instruments which cannot be further divided. This allows us to postulate that \emph{it is always possible to decompose a measuring instrument into its maximally divided collection of sub-instruments}. We assume that it is always possible to decompose a measuring instrument as in terms of its component sub-instruments. To make sense of this we need structures that enable us to factorise polynomials in $\Rcal(\Ecal)$. By the fundamental theorem of algebra, we can always factorise polynomials in the field of complex numbers. Hence we may assume the underlying field to be that of complex numbers
+$$\KK\cong \CC.$$
+Therefore we assume the pairing to be a real bilinear map to the field of complex numbers
+$$\big\langle \cdot|\cdot\big\rangle_{\Rcal(\Ecal)} :\Acal_* \times \Rcal(\Ecal)\to \CC.$$
+For mathematical convenience, we will transfer this complex structure to the vector spaces $\Acal_* $ and $\Rcal(\Ecal)$ themselves, and assume that $\Acal_* $ and $\Rcal(\Ecal)$ are complex vector spaces. We require the scaling of both effects and ensembles by a unit length complex number to give the same pairing as the unscaled pairing. This requirement along with real linearity in each argument forces us to assume the pairing is sesquilinear.
+
+\subsubsubsection{The Field of Quaternions}
+\noindent Since the set of quaternions is not an algebra over $\CC$, they do not intrinsically allow for factorisation as required in the discussion above. Hence the quaternions are insufficient for describing the postulates so far. On the other hand, the structures in quaternions are not \emph{required} by the postulates so far, and hence quaternions cannot be part of the universal mathematical theory for these postulates. The use of the field of quaternions is both unnecessary and insufficient for the articulation of the postulates discussed so far. We may therefore rule out any role of the field of quaternions in the articulation of the postulates discussed so far.
+
+\subsection*{Banach $^*$-Algebra Structure}
+For any physically meaningful manipulation of the system can be thought of as a manipulation of the preparation procedures or dually as a manipulation of the ensembles. From the discussion above for the need of complex structure, we have the tools of complex numbers for the study of effects. We can now study how the manipulation of ensembles and effects are related to each other. For any physically meaningful manipulation $T$ of the system, there must exist some operator $T^\dagger$ such that
+$$\big\langle R_T\omega|\Rcal_E\big\rangle_{\Rcal(\Ecal)}=\big\langle \omega|T^\dagger \Rcal_E\big\rangle_{\Rcal(\Ecal)}.$$
+The right-hand side of the equation is a rearrangement of component instruments, and hence must be compatible with the complex structure. The map $T^\dagger$ can be equivalently be described as the bounded linear map
+\begin{align*}
+	T^\dagger:\Rcal(\Ecal)&\longrightarrow \Rcal(\Ecal).\\
+				\Rcal_E&\mapsto \Big[\omega\mapsto \big\langle R_T\omega|\Rcal_E\big\rangle_{\Rcal(\Ecal)}\Big].
+\end{align*}
+Note that the underlying fields play a very subtle role here. In the first situation, in defining the map $R_T$ on $\Acal_*$ the pairing $\mu(\cdot|\cdot)$ does not contain any additional complex structure requirements and are only introduced by the pairing $\langle \cdot|\cdot\rangle_{\Rcal(\Ecal)}$. The map $R_T$ can also be described using the left-action, since it corresponds to the transformation by $T$ of effects which can then be pre-composed with effects. The $\dagger$-operation would have the effect of reversing the order of taking product, when viewed in terms of ensembles.
+
+By the sesquilinearity of the pairing $\langle \cdot|\cdot\rangle_{\Rcal(\Ecal)}$ it follows for all physically relevant operators $T,S$ on the space $\Rcal(\Ecal)$ and for all scalars $\lambda$, and $\mu$ that,
+\begin{align*}
+	\big({\lambda T+\mu S}\big)^\dagger &=\overline{\lambda} T^\dagger +\overline{\mu} S^\dagger , \\
+	\big(TS\big)^\dagger&=S^\dagger T^\dagger.
+\end{align*}
+We obtain the following operation
+\[\dagger:\Bcal\big(\Rcal(\Ecal)\big)\to \Bcal\big(\Rcal(\Ecal)\big).\]
+The $\dagger$-operation seems to be completely algebraic in nature, however it also  possesses interesting topological properties, since the topologies on the space of effects and state space operationally correspond to the physical notion of accuracy.
+
+In order to describe the topological properties of the operation $\dagger$, we now describe the notion of complementary effect and its relation to the notion of topological complementation on Banach spaces. This notion of complement of effects is closely related to the notion of topological complementation of closed subspaces on Banach spaces. The Banach space structure on $\Rcal(\Ecal)$ allows us to make sense of closed subspaces of $\Rcal(\Ecal)$, with respect to the norm inherited from $\Bcal(\Ecal)$. Let $\Mcal$ be a closed subspace of $\Rcal(\Ecal)$, we say that $\Mcal$ is topologically complemented if there exists a closed subspace $\Mcal^\perp$ of $\Rcal(\Ecal)$ such that
+$$\Mcal\oplus \Mcal^\perp = \Rcal(\Ecal).$$
+In such a case every element $R$ of $\Rcal(\Ecal)$ can be uniquely decomposed as a direct sum of elements $R_\Mcal+R_\Mcal^\perp$ where $R_\Mcal$ belongs to $\Mcal$ and $R_{\Mcal^\perp}$ belongs to $\Mcal^\perp$. Hence we can consider the map $P_\Mcal:\Rcal(\Ecal)\to \Rcal(\Ecal)$ which sends each element $R$ in $\Rcal(\Ecal)$ to the element $R_\Mcal$ in $\Mcal$. Since we do not have to decompose $R$ any further we must have
+$$P_\Mcal=P_\Mcal^2.$$
+The closed graph theorem relates the continuity of operators on a spaces and the topology of the product spaces, and says that an operator on a Banach space is continuous if and only if its graph is a closed subset of the product Banach space. Since both $\Rcal(\Ecal)$ and $\Mcal$ are closed, it follows that $P_\Mcal$ has a closed graph, and hence the projection onto the closed complemented subspace $\Mcal$ of $\Rcal(\Ecal)$ given by the operator
+$$P_\Mcal:\Rcal(\Ecal)\to \Rcal(\Ecal),$$
+is a continuous operator on $\Rcal(\Ecal)$. The continuous projection onto the topological complement $\Mcal^\perp$ is denoted by $P_{\Mcal^\perp}=(P_\Mcal)^\perp$ and we must have
+\[P_\Mcal+ (P_\Mcal)^\perp=\mathbb{I}_{\Rcal(\Ecal)},\]
+where $\mathbb{I}_{\Rcal(\Ecal)}$ is the identity operator on $\Rcal(\Rcal)$. Conversely, every continuous projection $P_\Mcal$, corresponds to a unique closed complemented subspace $\Mcal$. 
+
+Suppose we have a measuring instrument which can measure an outcome $o$, the change occurring in the instrument corresponds to the effect for $o$. If the measuring instrument does not undergo any change, then we can infer that the outcome $o$ had not occurred. Since the outcome $o$ not occurring is also an outcome by itself, denoted by $\neg o$, and the same measuring instrument also be used for measuring $\neg o$, the instrument not undergoing a change corresponds to the effect for $\neg o$. Hence we must have an operation on the space of effects which assigns to every effect $\mu(\cdot|o)$ corresponding to the outcome $o$, the effect $\mu(\cdot|{\neg o})$ corresponding to the outcome $\neg o$. We call $\mu(\cdot|{\neg o})$ the complement of $\mu(\cdot|o)$. Since the space of effects is contained in $\Rcal(\Ecal)$ and since each effect correspond to a continuous projection operator, it follows that every effect corresponds to a unique closed complemented subspace of $\Rcal(\Ecal)$. The notion of complementation of effects coincides with the notion of topological complementation. For any outcome $o$ we must have,
+\[\Rcal_{\mu(\cdot|\neg o)}=\big(\Rcal_{\mu(\cdot|o)}\big)^\perp.\]
+We now study the properties of the $\dagger$-operation.
+\subsubsubsection{Involutiveness of $\dagger$-Operation}
+\noindent Every laboratory can be thought of as a subsystem of the universe, and can equivalently be described in terms of the preparation procedures it can prepare, or by all the experiments which we can perform in the laboratory. By switching off the laboratory, we switch off all the experiments we could perform in the laboratory, or equivalently switch of all the preparation procedures in the laboratory. The laboratory itself can be thought of as a measuring instrument which is compatible with all the experiments it can perform, and for the laboratory itself, this must correspond to the identity element. Hence to each laboratory, there must exist a projection element, which commutes with every experiment that can be performed in the laboratory. To each preparation procedure in the laboratory, this projection element corresponds to the switching on of the procedure. For each preparation procedure, we have a collection of laboratories in which the preparation procedure can exist. For example, a preparation procedure in a laboratory, is also a preparation procedure in a bigger laboratory which contains the smaller laboratory. The projection element corresponding to the smallest laboratory (by Zorn's lemma) to which the preparation procedure can belong to, will be called the support of the preparation procedure. Hence we obtain a correspondence between projection elements and collection of preparation procedures for which the projection corresponds to the minimal laboratory. If $\mu(\rho|\cdot)$ is the ensemble corresponding to some preparation procedure $\rho$, then we denote by $E_\rho$ the projection element as described above. We must require that
+$$\big\|\mu(\rho|\cdot)\big\|_{\Acal_* }=\big\| E_\rho\big\|_{\Ecal}.$$
+By linearity, for all effects $E$ belonging to the support of $\mu(\rho|\cdot)$, and hence also the support of $E_\rho^\perp$, the operator $(T^\dagger)^\dagger$ must be such that $\langle \mu(\rho|\cdot)|(T^{\dagger})^\dagger \Rcal_E\rangle_{\Rcal(\Ecal)}=\langle \mu(R_T\rho|\cdot)|\Rcal_E\rangle_{\Rcal(\Ecal)}.$ By the uniqueness of the pairing of closed complemented subspaces with its complement, and since ensembles and effects separate each other, we must require that
+$$(T^\dagger)^\dagger=T.$$
+Note that the involution of the $\dagger$-operation relies on the uniqueness of topological complementation. From the discussion so far, we expect $\Bcal(\Rcal(\Ecal))$ to be a Banach algebra equipped with an involution $\dagger$. Such Banach algebras are called Banach $^*$-algebras. The space of effects $\Rcal(\Ecal)$ is a subset of this collection, and hence we can consider this space of physically relevant operations on the space of effects itself as the object of study.
+\subsubsection*{$W^*$-Algebra Structure}
+On the otherhand, ensembles are themselves closely related to effects in an opposite way via the notion of support. Hence the composite manipulation of the system acts in an \emph{independent} way on the space of effects and the state space. From the discussion about norms on $\Rcal(\Ecal)$ and $\Acal_* $, we know that the norms are closely related to the notion of accuracy of measuring instruments and preparation procedures. Since the manipulations introduced on the space of effects and state space are opposite of each other they are independent, and we should expect the accuracies of effects and ensembles to be multiplicative. The relation between support properties of ensembles and effects captures the complementary nature of such a composite manipulation $T^\dagger T$ of the system.
+
+We now make this precise via topological complementations and the expected relationship between subspaces of the state space and ideals of the space of effects. The norm of $T^\dagger T$ is given by
+$$\big\| T^\dagger T\big\|=\sup_{E\in \mathfrak{E}\atop\omega\in \mathfrak{S}}\Big[ \big|\big\langle R_T\omega|T\Rcal_E\big\rangle_{\Rcal(\Ecal)}\big| \Big].$$
+We denote the space ${\Bcal(\Rcal(\Ecal))}$ of bounded operators on $\Rcal(\Ecal)$. We must have,
+\begin{align*}
+	\big\| T^\dagger T\big\|&=\sup_{E\in \mathfrak{E}\atop\omega\in \mathfrak{S}}\Big[ \big|\big\langle R_T\omega|T\Rcal_E\big\rangle_{\Rcal(\Ecal)}\big| \Big]\\&=\sup_{E\in \mathfrak{E}}\Big[\big\|T\Rcal_E\big\|\Big]\sup_{\omega\in \mathfrak{S}}\Big[\big\|R_T\omega\big\|\Big]=\big\| T\big\|^2.
+\end{align*}
+The reason for the equality of products of supremums is due to the fact that for every $\omega$ we can split the state space as direct sum of complemented subspaces as 
+$\Acal_* =(P_{R_T\omega})\Acal_* \oplus ({P_{R_T\omega}})^\perp \Acal_*$ and the pairing vanishes if $T\Rcal_E$ does not belong to the support of $R_T\omega$, we can assume that the supremum is attained only when $T\Rcal_E$ belongs to the ideal $({P_{R_T\omega}})^\perp \Rcal(\Ecal)$. Hence we have,
+$$\big\|T^\dagger T\big\|=\big\|T\big\|^2.$$
+This is known as the $C^*$-identity. A Banach$^*$-algebras is called a $C^*$-algebra if it satisfies the $C^*$-identity. It is sufficient to consider only the bounded operators, and any other unbounded yet physically meaningful manipulations can be described as maps on the bounded operators. The algebra of observables $\Acal$ is the collection of all elements of $\Bcal(\Rcal(\Ecal))$ which correspond to physically meaningful manipulations of the system. We must have a representation of measuring instruments inside the algebra of observables. Since any changes from physically meaningful manipulations must be noticed by the space of ensembles, it follows that $\Acal_*$ must remain separating for the algebra of observables $\Acal$. Hence we must have a dual pairing,
+$$\big\langle\cdot|\cdot\big\rangle:\Acal_*\times \Acal\to \CC,$$
+such that $\Acal$ is the dual Banach space of $\Acal_*$, that is,
+$$(\Acal_*)^*\cong \Acal.$$
+A $W^*$-algebra is a $C^*$-algebra $\Acal$ which is the dual Banach space of a Banach space $\Acal_*$ and in such a case the Banach space $\Acal_*$ is called the predual of $\Acal$. The procedure so far can be described in terms of the following concatenations of embeddings from $\mathfrak{E}$ to the $W^*$-subalgebra $\Acal$ of $\Bcal(\Rcal(\Ecal))$;
+%$o\mapsto \mu(\cdot|o)\mapsto \Rcal_{\mu(\cdot|o)}\mapsto \Rcal_{\Rcal_{\mu(\cdot|o)}}.$
+\[
+\begin{tikzcd}[row sep=.75em, column sep=1cm]
+	o \\
+	& {\mu(\cdot|o)} \\
+	&& {\Rcal_{\mu(\cdot|o)}} \\
+	&&& {\Rcal_{\Rcal_{\mu(\cdot|o)}}}
+	\arrow[mapsto, from=1-1, to=2-2,controls={+(.8,-.9) and +(-1,1.35)},]
+	\arrow[mapsto, from=2-2, to=3-3,controls={+(1,-1) and +(-1,1.5)},]
+	\arrow[mapsto, from=3-3, to=4-4,controls={+(1.15,-1.15) and +(-1,1.55)},]
+\end{tikzcd}
+\]
+We may expect any operational theory to be represented by the pairing of a $W^*$-algebra, and its predual, where the predual represents an observer's possible beliefs and the $W^*$-algebra represents the system. From the discussion so far, the $W^*$-algebra structure is inevitable if accept the assumptions we have used so far. By Sakai's characterisation of von Neumann algebras, see \cite{Sakai}, $W^*$-algebras are the same as von Neumann algebras on a Hilbert space. In this sense, Hilbert spaces are also inevitable. The tools used in Tomiyama's proof of Sakai's theorem in \cite{TomiyamaII}, are closest to the discussion here and could be used to smoothly transition from physics to the vast subject of operator algebras.
+
+\subsubsubsection{Digression: Physical Theories \& Reality}
+\noindent If we reality can be approximately described by physical theories, then \emph{reality is a functor categorical object}, corresponding to the limit of physical theories in the complete category of functors from the category of physical theories to the category of sets. Where the category of physical theories consists of physical theories as objects, and relation between physical theories as morphisms. In this sense, we may view this category of functors as \emph{higher reality}. Mathematical theories may then be viewed as \emph{higher ensembles} since we may view the axioms of the mathematical theory as postulates of a physical theory, which itself can be thought of as an observation of how observers observe reality. The mathematical proofs can then be thought of as \emph{higher effects} allowing the mathematician to verify their beliefs or intuition.
+
+\subsubsection*{Acknowledgements}
+I extend my sincere thanks to my master's advisor, Dr. G\"unther H\"ormann, for their invaluable guidance and support during my research. Their expertise and encouragement have been crucial to the completion of this work.
+
+\newpage
+{\phantomsection\addcontentsline{toc}{chapter}{{Bibliography}}}
+\begin{thebibliography}{999}
+\begin{small}
+\bibitem{Araki}
+\textsc{Araki, H.}
+\newblock {Mathematical Theory of Quantum Fields}.
+\newblock Oxford Science Publications, 1999.
+
+\bibitem{Gudder}
+\textsc{Gudder, S.}
+\newblock {Convexity and Mixtures}.
+\newblock SIAM Review, Vol. 19, No. 2, April 1977.
+
+\bibitem{Haag}
+\textsc{Haag, R.}
+\newblock {Local Quantum Physics}.
+\newblock Springer-Verlag, 1995.
+
+
+\bibitem{Jauch}
+\textsc{Jauch, J. M.}
+\newblock {Foundations of Quantum Mechanics}.
+\newblock Addison-Wesley Publishing Company, 1968.
+
+\bibitem{Kalmbach}
+\textsc{Kalmbach, G.}
+\newblock {Orthomodular Lattices}.
+\newblock Academic Press, 1983.
+
+\bibitem{Kraus}
+\textsc{Kraus, K.}
+\newblock {States, Effects, and Operations}.
+\newblock Lectures Notes in Physics, Springer-Verlag, 1983.
+
+\bibitem{Ludwig1}
+\textsc{Ludwig, G.}
+\newblock {Foundations of Quantum Mechanics I}.
+\newblock Springer-Verlag, 1983.
+
+\bibitem{Ludwig2}
+\textsc{Ludwig, G.}
+\newblock {Foundations of Quantum Mechanics II}.
+\newblock Springer-Verlag, 1985.
+
+\bibitem{Ludwig3}
+\textsc{Ludwig, G.}
+\newblock {An Axiomatic Basis for Quantum Mechanics Volume 1}.
+\newblock Springer-Verlag, 1985.
+
+\bibitem{Peres}
+\textsc{Peres, A.}
+\newblock {Quantum Theory: Concepts and Methods}.
+\newblock Kluwer Academic Publishers, 2002.
+
+\bibitem{Primas}
+\textsc{Primas, H.}
+\newblock {Chemistry, Quantum Mechanics and Reductionism}.
+\newblock Springer-Verlag, 1983.
+
+\bibitem{Sakai}
+\textsc{Sakai, S.}
+\newblock {$C^*$-Algebras and $W^*$-Algebras}.
+\newblock Springer, 1971.
+
+\bibitem{Takesaki}
+\textsc{Takesaki, M.}
+\newblock {Theory of Operator Algebras I}.
+\newblock Springer-Verlag, 1979.
+
+\bibitem{TomiyamaII}
+\textsc{Tomiyama, J.}
+\newblock {On the Projection of Norm One in $W^*$-Algebras II}.
+\newblock Tohoku Math. J.. 33, 10., 1958.
+
+\bibitem{Varadarajan}
+\textsc{Varadarajan, V. S.}
+\newblock {Geometry of Quantum Theory}.
+\newblock Van Nostrand, New York, 1970.
+
+\bibitem{vonNeumann}
+\textsc{von Neumann, J.}
+\newblock {Mathematical Foundations of Quantum Theory}.
+\newblock Princeton University Press, 1955.
+\end{small}
+\end{thebibliography}
+\end{document}

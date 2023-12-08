@@ -1,0 +1,220 @@
+\usepackage{bm}
+\usepackage{dsfont}
+\usepackage{xcolor}
+\usepackage{varwidth}
+\usepackage{array}
+\usepackage[top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage[pdftex,bookmarks=true,bookmarksdepth=4]{hyperref}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{MnSymbol}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{bigints}
+\usetikzlibrary{cd}
+\usepackage{tikz}
+\usepackage{stackengine}
+\usepackage{appendix}
+\usepackage{mathrsfs}
+\usepackage{eso-pic}
+\usepackage{titlesec, blindtext, color}
+\usepackage[T1]{fontenc}
+\usepackage{tocloft}
+\usepackage{etoolbox}
+\usepackage[nottoc]{tocbibind}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usetikzlibrary{positioning,backgrounds,decorations.markings}
+\usepackage{marginnote}
+\usepackage{extarrows}
+\usepackage{setspace}
+\usepackage{schemata}
+\usepackage{mathtools}
+\usepackage{changepage}
+\usepackage{eso-pic}
+\usepackage{bbm}
+\definecolor{bluegreen}{rgb}{-.2,.4,0.6}
+\definecolor{lightbluegreen}{rgb}{166,225,255}
+\definecolor{lightblue}{HTML}{5dbcd2}
+\usepackage{tocloft}
+\cftsetindents{section}{2em}{3em}
+\cftsetindents{subsection}{5em}{3.5em}
+\cftsetindents{subsubsection}{8.5em}{4em}
+\renewcommand\cfttoctitlefont{\LARGE \scshape\bfseries}
+\renewcommand{\contentsname}{\vspace{-3em}\begin{center}{\large Table of Contents}\vspace{-1.5em}\end{center}}
+\renewcommand\cftpartfont{\large\bfseries\scshape}
+\renewcommand\cftsecfont{\normalsize}
+\let\oldthebibliography\thebibliography
+\let\endoldthebibliography\endthebibliography
+\renewenvironment{thebibliography}[1]{\begin{oldthebibliography}{#1}\setlength{\itemsep}{0.45em}\setlength{\parskip}{0em}}{\end{oldthebibliography}}
+\usepackage[some]{background}
+\newcommand\blankpage{%
+	\null
+	\thispagestyle{empty}%
+	\addtocounter{page}{0}%
+	\newpage}
+\titleformat{\chapter}[hang]{\vspace{0em}\LARGE\scshape\bfseries}{\hspace{-1cm} \thechapter\hsp\hsp\hsp{|}\hsp\hsp\hsp}{0pt}{\LARGE\bfseries}
+\titleformat*{\section}{\large\bfseries\scshape}
+\titleformat*{\subsection}{\normalsize\bfseries\scshape}
+\titleformat*{\subsubsection}{\normalsize\bfseries\scshape}
+\titlespacing*{\chapter}{0pt}{25pt}{100pt}
+\titlespacing*{\section}{0pt}{15pt}{15pt}
+\titlespacing*{\subsection}{0pt}{12.5pt}{12.5pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{10pt}
+\geometry{top=20mm,total={155mm,230mm}}
+\newtheorem{theorem}{{\textsc{Theorem}}}[section]
+\newtheorem{lemma}[theorem]{\textsc{Lemma}}
+\newtheorem{proposition}[theorem]{\textsc{Proposition}}
+\newtheorem{corollary}[theorem]{\textsc{Corollary}}
+\newtheorem*{postulate}{\textsc{Postulate}}
+\theoremstyle{definition}
+\newtheorem{definition}{\textsc{Definition}}[section]
+\usepackage{tocloft}
+\cftsetindents{section}{2em}{3em}
+\cftsetindents{subsection}{5em}{3.5em}
+\cftsetindents{subsubsection}{8.5em}{4em}
+\renewcommand\cfttoctitlefont{\LARGE \scshape\bfseries}
+\renewcommand{\contentsname}{\vspace{-3em}\begin{center}{\large Table of Contents}\vspace{-1.5em}\end{center}}
+\renewcommand\cftsecfont{\normalsize}
+\setcounter{tocdepth}{3}
+\newcommand{\tocseparator}{\addtocontents{toc}{\protect\addvspace{10pt}\hrule\protect\addvspace{5pt}}}
+\preto\backmatter{\tocseparator}
+\DeclareMathOperator*{\Tr}{Tr}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\arginf}{arg\,inf}
+\DeclareMathOperator*{\argsup}{arg\,sup}
+\DeclareMathOperator*{\coker}{coker}
+\DeclareMathOperator*{\coim}{coim}
+\DeclareMathOperator*{\germ}{germ}
+\DeclareMathOperator*{\Sh}{Sh}
+\DeclareMathOperator*{\PSh}{PSh}
+\DeclareMathOperator*{\epi}{epi}
+\DeclareMathOperator*{\hyp}{hyp}
+\DeclareMathOperator*{\Lan}{Lan}
+\DeclareMathOperator*{\Ran}{Ran}
+\DeclareMathOperator*{\Hom}{Hom}
+\DeclareMathOperator*{\IHom}{{\mathcal{H}}\emph{om}}
+\DeclareMathOperator*{\Ob}{Ob}
+\DeclareMathOperator*{\Sets}{\mathbf{Sets}}
+\DeclareMathOperator*{\Nat}{Nat}
+\DeclareMathOperator*{\Id}{\textstyle\mathbbm{1}}
+\DeclareMathOperator*{\op}{{op}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\Ccal}{\mathcal{C}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Acal}{\mathcal{A}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\Ical}{\mathcal{I}}
+\newcommand{\Jcal}{\mathcal{J}}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\Ocal}{\mathcal{O}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Tcal}{\mathcal{T}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\Vcal}{\mathcal{V}}
+\newcommand{\Qcal}{\mathcal{Q}}
+\newcommand{\Wcal}{\mathcal{W}}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\Zcal}{\mathcal{Z}}
+\newcommand{\Nfrak}{\mathfrak{N}}
+\newcommand{\Ufrak}{\mathfrak{U}}
+\newcommand{\AF}{\mathcal{AF}}
+\newcommand{\Ci}{\mathcal{C}^\infty}
+\DeclareRobustCommand{\rchi}{{\mathpalette\irchi\relax}}
+\newcommand{\irchi}[2]{\raisebox{\depth}{$#1\chi$}} % inner command, used by \rchi
+
+\makeatletter
+\DeclareRobustCommand{\tvdots}{\vbox{\baselineskip4\p@\lineskiplimit\z@\kern0\p@\hbox{.}\hbox{.}\hbox{.}}}
+\newcommand\dirlim{\mathop{\mathpalette\varlim@{\rightarrowfill@\scriptstyle}}\nmlimits@}
+\newcommand\invlim{\mathop{\mathpalette\varlim@{\leftarrowfill@\scriptstyle}}\nmlimits@}
+\makeatother
+\DeclareFontFamily{U}{mathx}{}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathAccent{\widehat}{0}{mathx}{"70}
+\DeclareMathAccent{\widecheck}{0}{mathx}{"71}
+\DeclareMathOperator*{\UA}{\emph{A}}
+\DeclareMathOperator*{\UB}{\emph{B}}
+\usepackage{extarrows}
+\usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{changepage}
+\DeclareMathOperator*{\rad}{rad}
+\usepackage{schemata}
+\newcommand{\vertiii}[1]{{\left\vert\kern-0.125ex\left\vert\kern-0.125ex\left\vert #1
+		\right\vert\kern-0.125ex\right\vert\kern-0.125ex\right\vert}}
+\newcommand\sch[4]{\Schema{#1}{#2}{\schemabox{#3}}{\schemabox{#4}}}
+\DeclareMathOperator*{\Aut}{Aut}
+
+\colorlet{grey}{gray!50}
+\colorlet{gray}{gray!60}
+\newcommand\s[1]{\mathsf{#1}}
+\newcommand\DoubleComplex
+{\begin{tikzcd}[ampersand replacement=\&,]
+		\&\gray{\tvdots}\arrow[d, "", gray]\&\gray{\tvdots}\arrow[d, "", gray]\& \gray{\tvdots}\arrow[d, "", gray]\\
+		\gray{\cdots}\arrow[r, gray]\&\bullet\arrow[d]\arrow[r]\&\bullet\arrow[d]\arrow[r]\&\bullet\arrow[d]\arrow[r, gray]\&\gray{\cdots}\\
+		\gray{\cdots}\arrow[r, gray]\&\bullet\arrow[d]\arrow[r]\&\bullet\arrow[d]\arrow[r]\&\bullet\arrow[d]\arrow[r, gray]\&\gray{\cdots}\\
+		\gray{\cdots}\arrow[r, gray]\&\bullet\arrow[d, gray]\arrow[r]\&\bullet\arrow[d, gray]\arrow[r]\&\bullet\arrow[d, gray]\arrow[r, gray]\&\gray{\cdots}\\
+		\&\gray{\tvdots}\&\gray{\tvdots}\&\gray{\tvdots}
+\end{tikzcd}}
+\definecolor{skin}{HTML}{f9f3de}
+\definecolor{wheatskin}{HTML}{c8bea0}
+\definecolor{darkskin}{HTML}{83734a}
+\definecolor{darkerskin}{HTML}{64521c}
+\def\gray#1{|[gray]|#1}
+\def\grey#1{|[grey]|#1}
+\def\coker{\operatorname{coker}}
+\def\atfield[#1]{\arrow[#1,preaction={draw=white,-,line width=3},nodes={fill=white}]}
+\newcommand\subsubsubsection[1]{\vspace{.35em}
+
+\noindent{\small\bfseries\textsc{#1}}
+
+\vspace{.35em}}
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{28}{0}}
+\makeatother
+\RequirePackage{fix-cm}
+{
+\definecolor{bluegreen}{rgb}{-.2,.4,0.6}
+\definecolor{lightbluegreen}{rgb}{166,225,255}
+\definecolor{lightblue}{HTML}{5dbcd2}
+\makeatletter
+\special{papersize=\the\paperwidth,\the\paperheight}
+% \def\@seccntformat#1{\csname the#1\endcsname\quad}% Default
+\def\@seccntformat#1{\csname the#1\endcsname\hspace*{0.5em}$|$\hspace*{0.5em}}
+\makeatother
+\definecolor{gray55}{gray}{0.55}
+\newcommand{\hsp}{\hspace{2.5pt}}
+\makeatletter
+\def\@tvsp{\mathchoice{{}\mkern-4.5mu}{{}\mkern-4.5mu}{{}\mkern-2.5mu}{}}
+\def\llangle{\langle\@tvsp\langle}
+\def\bigllangle{\big\langle\@tvsp\big\langle}
+\def\rrangle{\rangle\@tvsp\rangle}
+\def\bigrrangle{\big\rangle\@tvsp\big\rangle}
+\def\Bigllangle{\Big\langle\@tvsp\Big\langle}
+\def\Bigrrangle{\Big\rangle\@tvsp\Big\rangle}
+\def\lllangle{\langle\@tvsp\langle\@tvsp\langle}
+\def\biglllangle{\big\langle\@tvsp\big\langle\@tvsp\big\langle}
+\def\rrrangle{\rangle\@tvsp\rangle\@tvsp\rangle}
+\def\bigrrrangle{\big\rangle\@tvsp\big\rangle\@tvsp\big\rangle}
+\def\Biglllangle{\Big\langle\@tvsp\Big\langle\@tvsp\Big\langle}
+\def\Bigrrrangle{\Big\rangle\@tvsp\Big\rangle\@tvsp\Big\rangle}
+\makeatother
